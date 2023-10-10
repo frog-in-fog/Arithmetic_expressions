@@ -3,6 +3,7 @@
 #include <string>
 #include <cctype>
 #include <sstream>
+#include <cmath>
 
 
 template <typename T>
@@ -231,7 +232,7 @@ int getRes(std::string& str_out) {
                 case '*': res = num1 * num2; break;
                 case '/': res = num2 / num1; break;
                 case '%': res = num2 % num1; break;
-                case '^': res = num2 ^ num1; break;
+                case '^': res = pow(num2, num1); break;
                 default: throw (std::string)"Error";
             }
             result.push(res);
